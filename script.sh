@@ -10,6 +10,9 @@ case "$1" in
 *.epub|*.odt|*.docx|*.ipynb)
     exec pandoc "$1" --to=html --wrap=none --markdown-headings=atx
     ;;
+*.adoc|*.asciidoc)
+    asciidoctor -a stylesheet! "$1" -o -
+    ;;
 *.csv)
     # specify --delimiter if values not delimited by ","
     exec csvtk csv2json "$1"

@@ -26,13 +26,22 @@ Take a look at [script.sh](./script.sh) to see how this is done.
 
 ## epub, odt, docx, ipynb
 
+pandoc is a powerful conversion tool which allows us to convert many file types into HTML.
+
 ```bash
 pandoc "$1" --to=html --wrap=none --markdown-headings=atx
 ```
 
-## PDF
+## AsciiDoc
 
-### poppler-utils
+Using [asciidoctor](https://docs.asciidoctor.org/) we can convert AsciiDoc to HTML.
+This ensures that URLs are properly interpreted.
+
+```bash
+asciidoctor -a stylesheet! "$1" -o -
+```
+
+## PDF
 
 Using poppler-utils we can convert PDFs to text or HTML:
 
@@ -40,8 +49,6 @@ Using poppler-utils we can convert PDFs to text or HTML:
 pdftotext "$1" -
 pdftohtml -s "$1" -stdout
 ```
-
-### pdftk
 
 Alternatively, pdftk can be used to extract URI directives from PDFs.
 Source: https://unix.stackexchange.com/a/531883

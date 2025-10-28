@@ -1,0 +1,6 @@
+= My Article
+J. Smith
+
+https://en.wikipedia.org/wiki/AsciiDoc[Wikipedia]
+is an on-line encyclopedia, available in
+English and *many* other languages.
