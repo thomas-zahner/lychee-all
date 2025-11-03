@@ -10,14 +10,14 @@ If invalid UTF-8 characters are encountered the input file is skipped.
 
 # Preprocess files
 
-lychee allows file preprocessing with the `--pre` flag.
-For each input file the command specified with `--pre` is invoked instead of reading the input file directly.
+lychee allows file preprocessing with the `--preprocess` flag.
+For each input file the command specified with `--preprocess` is invoked instead of reading the input file directly.
 In the following there are examples how to preprocess common file formats.
 In most cases it's necessary to create a helper script for preprocessing,
 as no parameters can be supplied from the CLI directly.
 
 ```bash
-lychee files/* --pre ./script.sh
+lychee files/* --preprocess ./script.sh
 ```
 
 Take a look at [script.sh](./script.sh) to see how this is done.
