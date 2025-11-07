@@ -1,5 +1,8 @@
 A collection of use-cases and scripts to make [lychee] compatible with additional file formats.
 
+**Your use-case or file format is not yet documented?
+Feel free to file an issue or create a PR!**
+
 Out of the box lychee supports HTML, Markdown and plain text formats.
 More precisely, HTML files are parsed as HTML5 with the use of the [html5ever] parser.
 Markdown files are treated as [CommonMark] with the use of [pulldown-cmark].
