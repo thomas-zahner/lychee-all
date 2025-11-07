@@ -113,3 +113,10 @@ csvtk csv2json "$1"
 [LibreOffice]: https://help.libreoffice.org/latest/he/text/shared/guide/start_parameters.html
 [poppler-utils]: https://poppler.freedesktop.org/
 [pdftk]: https://gitlab.com/pdftk-java/pdftk
+
+# Tests
+
+To ensure `preprocess.sh` works as expected, we have a test script `test.sh` which is also run in CI.
+The examples in this README should be tested this way.
+Whenever possible we try to create the test files programatically with `produce-files.sh`.
+When this is not easily possible we create them manually.
